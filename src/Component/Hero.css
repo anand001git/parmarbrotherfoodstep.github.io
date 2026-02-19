@@ -1,0 +1,7 @@
+.hero{
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.hero .display-5{
+  font-weight: 700;
+}

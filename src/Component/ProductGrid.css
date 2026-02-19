@@ -1,0 +1,54 @@
+.products .card{
+  transition: transform .12s ease, box-shadow .12s ease;
+  border-radius:10px; overflow:hidden;
+}
+.products .card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(8,16,12,0.06);
+}
+
+/* image container with overlay actions */
+.card-media{ position:relative; overflow:hidden }
+.card-media img{ width:100%; display:block; transition: transform .18s ease }
+.card-media:hover img{ transform: scale(1.04) }
+.card-overlay{ position:absolute; right:10px; top:10px; display:flex; gap:8px; opacity:0; transform:translateY(-6px); transition: all .14s ease }
+.card-media:hover .card-overlay{ opacity:1; transform:none }
+
+/* make grid denser on larger screens and single column on xs */
+.products .row{ display:flex; flex-wrap:wrap }
+.products .col-6{ padding:6px }
+
+@media (max-width: 575.98px){
+  .products .col-6{ flex:0 0 100%; max-width:100% }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+  .products .col-6{ flex:0 0 50%; max-width:50% }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  .products .col-md-4{ flex:0 0 33.3333%; max-width:33.3333% }
+}
+
+@media (min-width: 992px){
+  .products .col-lg-3{ flex:0 0 25%; max-width:25% }
+}
+
+/* subtle badge for sale or featured items (can be toggled via markup) */
+.product-badge{ position:absolute; left:10px; top:10px; background:linear-gradient(90deg,#ff7a59,#ff4a4a); color:#fff; padding:6px 8px; border-radius:8px; font-weight:700; font-size:0.8rem }
+
+/* center card contents on small screens for better visual balance */
+@media (max-width: 767.98px){
+  .products .card .card-body{ align-items:center; text-align:center }
+  .products .card .card-body .card-title{ white-space:normal }
+}
+
+/* product image and tags styling */
+.product-image{ width:100%; height:160px; object-fit:cover; display:block }
+.product-tags{ justify-content:flex-start }
+.tag-badge{ background:#ffffff; border:1px solid rgba(0,0,0,0.04); color:#134e39; padding:3px 8px; border-radius:8px; text-transform:capitalize }
+
+@media (max-width: 767.98px){
+  .product-tags{ justify-content:center }
+  .product-image{ height:180px }
+}

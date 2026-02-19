@@ -1,0 +1,26 @@
+.site-footer{
+  background: linear-gradient(180deg, #f8fff6 0%, #ffffff 60%);
+  color: #0b3a2f;
+  border-top: 1px solid rgba(31,111,77,0.06);
+}
+.site-footer .footer-logo{
+  width: 160px;
+}
+.site-footer a{ color: #155a3f; text-decoration: none; }
+.site-footer a:hover{ text-decoration: underline; }
+.site-footer .social{
+  display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; padding:0; border-radius:6px;
+  background: #fff; box-shadow: 0 1px 6px rgba(15,23,12,0.04);
+}
+.site-footer .payments .pay{
+  background: linear-gradient(90deg,#fff,#f2fff6); padding:6px 10px; border-radius:6px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); font-size:0.85rem;
+}
+.site-footer h6{ color: #0b3a2f; }
+.site-footer .socials a{ border: none; }
+
+/* responsive tweaks */
+@media (max-width: 767.98px){
+  .site-footer{ padding: 24px 0; }
+  .site-footer .footer-logo{ width: 120px; }
+  .site-footer .text-end{ text-align: left !important; margin-top: 12px; }
+}
